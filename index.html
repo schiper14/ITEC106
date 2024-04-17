@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In Form</title>
+	<style>
+		body {
+			background-color: #333;
+			color: #fff;
+			font-family: Arial, sans-serif;
+		}
+		form {
+			background-color: #444;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+			max-width: 400px;
+			margin: 50px auto;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+		}
+		input[type="text"], input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #555;
+			color: #fff;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			background-color: #777;
+			color: #fff;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		@media (max-width: 600px) {
+			form {
+				margin: 20px 0;
+			}
+		}
+	</style>
+	<script>
+		document.querySelector('form').addEventListener('submit', function(event) {
+			event.preventDefault();
+			var username = document.getElementById('username').value;
+			var password = document.getElementById('password').value;
+			if (username && password) {
+				alert('Logged in successfully!');
+			} else {
+				alert('Please fill in both the username and password fields.');
+			}
+		});
+	</script>
+</head>
+<body>
+	<center>
+		<h1> LOGIN FORM </h1>
+	<form action ="fontend.html">
+		<label for="username">Username:</label>
+		<input type="text" id="username" name="username">
+		<label for="password">Password:</label>
+		<input type="password" id="password" name="password">
+		<input type="submit" value="Log In"></a>
+	</form>
+</center>
+</body>
+</html>
